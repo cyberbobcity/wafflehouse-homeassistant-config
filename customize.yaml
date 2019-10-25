@@ -1,0 +1,50 @@
+light.hall_light:
+  friendly_name: Hall Light
+switch.backyard_lights:
+  friendly_name: Backyard Lights
+light.dining_room_light:
+  friendly_name: Dining Room Light
+light.foyer_light:
+  friendly_name: Foyer Light
+switch.front_lights:
+  friendly_name: Front Lights
+light.kitchen_light:
+  friendly_name: Kitchen Light
+light.kitchen_table:
+  friendly_name: Kitchen Table
+light.master_bedroom_light:
+  friendly_name: Master Bedroom Light
+light.nerdcave_light:
+  friendly_name: Nerdcave Light
+switch.house_fan:
+  friendly_name: House Fan
+light.bedroom_light:
+  friendly_name: Bedroom Light
+switch.garage_light:
+  friendly_name: Garage Light
+zwave.z_wave_sigma_designs_uzb_z_wave_usb_adapter:
+  hidden: true
+zwave.leviton_dzpd3_2bw_decora_300w_plug_in_smart_dimmer:
+  hidden: true
+zwave.leviton_dzpd3_2bw_decora_300w_plug_in_smart_dimmer_2:
+  hidden: true
+zwave.wink_unknown_type_0101_id_0001:
+  hidden: true
+sensor.wink_unknown_type_0101_id_0001_alarm_level:
+  hidden: true
+sensor.wink_unknown_type_0101_id_0001_alarm_type:
+  hidden: true
+sensor.wink_unknown_type_0101_id_0001_burglar:
+  hidden: true
+sensor.wink_unknown_type_0101_id_0001_luminance:
+  hidden: true
+sensor.wink_unknown_type_0101_id_0001_sourcenodeid:
+  hidden: true
+zwave.jasco_products_12730_fan_control_switch:
+  hidden: true
+weather.dining_room:
+  hidden: true
+sensor.sengled_e11_g13_03114fef_1_1794:
+  hidden: true
+sensor.wink_unknown_type_0101_id_0001_battery_level:
+  hidden: true

@@ -1,0 +1,21 @@
+# "Wink Relay" Wall Switch Relays
+- platform: mqtt
+  name: "Couch Light"
+  command_topic: "homeassistant/relays/0"
+  state_topic: "homeassistant/relays/0/state"
+  qos: 1
+  state_on: "ON"
+  state_off: "OFF"
+  payload_on: "on"
+  payload_off: "off"
+  retain: true
+- platform: mqtt
+  name: "Spotlights"
+  command_topic: "homeassistant/relays/1"
+  state_topic: "homeassistant/relays/1/state"
+  qos: 1
+  state_on: "ON"
+  state_off: "OFF"
+  payload_on: "on"
+  payload_off: "off"
+  retain: true

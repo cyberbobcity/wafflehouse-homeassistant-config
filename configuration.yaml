@@ -1,0 +1,80 @@
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+homeassistant:
+  customize: !include customize.yaml
+
+# MQTT Switches Config
+switch: !include switches.yaml
+
+# Ecobee Thermostat and Sensors
+ecobee:
+  api_key: !secret ecobee_api_key
+
+# Ring Video Doorbell
+ring:
+  username: !secret ring_username
+  password: !secret ring_password
+binary_sensor:
+  - platform: ring
+camera:
+  - platform: ring
+
+# Lutron Wall Switches
+lutron_caseta:
+  host: 172.26.254.188
+  keyfile: caseta.key
+  certfile: caseta.crt
+  ca_certs: caseta-bridge.crt
+
+#ZWave
+zwave:
+  usb_path: /dev/ttyUSB0
+
+#Zigbee
+zha:
+  usb_path: /dev/ttyUSB1
+  database_path: /config/zigbee.db
+
+# Chamberlain Garage Door Opener
+cover:
+  - platform: myq
+    username: !secret chamberlain_username
+    password: !secret chamberlain_password
+    type: chamberlain
+
+# MQTT Broker
+mqtt:
+  broker: 172.26.254.199
+  discovery: false
+  username: !secret mqtt_username
+  password: !secret mqtt_password
+
+# Home Assistant Cloud
+cloud:
+  alexa:
+    filter:
+      include_entities:
+       - sensor.nursery_temperature
+       - sensor.family_room_temperature
+       - sensor.bedroom_temperature
+       - sensor.dining_room_temperature
+       - sensor.laundry_room_temperature
+      exclude_domains:
+       - group
+       - sensor
+       - input_boolean
+       - media_player
+       - binary_sensor
+       - remote
+       - weather
+       - climate
+
+# Get Hunter Douglas Powerview Scenes
+scene:
+  platform: hunterdouglas_powerview
+  address: 172.26.254.186
+
+# Forward entities to Apple's HomeKit
+homekit:
